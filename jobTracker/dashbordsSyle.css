@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eef1f7;
+    min-height: 100vh;
+    padding: 60px 20px;
+    color: #270233;
+}
+
+.dashbord {
+    width: 100%;
+    max-width: 1150px;
+    margin: auto;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(40, 55, 80, 0.15);
+}
+
+header {
+    height: 65px;
+    background: #410655;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 25px;
+
+    color: white;
+}
+
+.dashbordhaed {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.dashbordhaed h2 {
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+main {
+    padding: 50px;
+}
+
+
+/* Statistics */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: #f7f0fa;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #e3e9ed;
+}
+
+.stat-card h2 {
+    font-size: 30px;
+    color: #270233;
+    margin-bottom: 7px;
+}
+
+.stat-card p {
+    font-size: 11px;
+    color: #ad8ab9;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+}
+
+
+/* add Button */
+.addButton {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.add-button {
+    background: #410655;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 12px 18px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+.add-button:hover {
+    background: #ad8ab9;
+}
+
+
+
+/* Table */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 850px;
+}
+
+thead {
+    background: #410655;
+    color: white;
+}
+
+th {
+    text-align: left;
+    padding: 13px;
+    font-size: 13px;
+}
+
+
+td {
+    padding: 14px 13px;
+    border-bottom: 1px solid #e8edf2;
+    font-size: 13px;
+    color: #4a5568;
+}
+tbody tr:hover {
+    background: #f7f9fb;
+}
+
+
+
+/* Status */
+.status {
+    border: none;
+    padding: 6px 9px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.status.Applied {
+    background: #edf0f3;
+    color: #59636f;
+}
+
+.status.Screening {
+    background: #fff2c9;
+    color: #98751a;
+}
+
+.status.Interviewing {
+    background: #e4ecfa;
+    color: #315d9b;
+}
+
+
+.status.Offer {
+    background: #dff3e6;
+    color: #31804c;
+}
+
+.status.Rejected {
+    background: #fbe3e3;
+    color: #b33a3a;
+}
+
+
+/* Delete */
+.delete-button {
+    border: none;
+    background: #fbe3e3;
+    color: #b33a3a;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.delete-button:hover {
+    background: #f4cccc;
+}
+
+
+/* Empty */
+.empty {
+    text-align: center;
+    padding: 50px 20px;
+    color: #ad8ab9;
+    line-height: 1.7;
+}
+
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 30, 45, 0.5);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 100;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.modal-header h2 {
+    color: #270233;
+}
+
+.modal-header button {
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    cursor: pointer;
+    color: #ad8ab9;
+}
+
+
+/* Form */
+form label {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #ad8ab9;
+}
+
+form input,
+form select {
+    width: 100%;
+    margin-top: 7px;
+    padding: 11px;
+    border: 1px solid #d7dee7;
+    border-radius: 7px;
+    outline: none;
+    font-size: 14px;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #270233;
+}
+
+/* Form Buttons */
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+
+.form-buttons button {
+    padding: 11px 18px;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cancel {
+    background: #edf0f3;
+    color: #ad8ab9;
+}
+
+.save {
+    background: #560571;
+    color: white;
+}

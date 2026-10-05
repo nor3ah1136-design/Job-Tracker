@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Job tracker</title>
+        <link rel="stylesheet" href="dashbordsSyle.css">
+
+    </head>
+
+<body>
+    <div class="dashbord">
+
+        <!--Dashboard upper section-->
+        <header>
+            <div class="dashbordhaed">
+                <h2>JOB TRACKING</h2>
+            </div>
+            <div class="dashbordhaed">
+                <h2 id="current-date"></h2> 
+            </div>
+        </header>
+
+        <!--The key content of the page consists of statistics and a job-tracking table.-->
+        <main>
+
+            <!-- Section of Statistics -->
+            <section class="stats">
+
+                <div class="stat-card">
+                    <h2 id="applicationsCount">0</h2>
+                    <p>APPLICATIONS</p>
+                </div>
+
+                <div class="stat-card">
+                    <h2 id="activeCount">0</h2>
+                    <p>ACTIVE PIPELINE</p>
+                </div>
+
+                <div class="stat-card">
+                    <h2 id="interviewCount">0</h2>
+                    <p>INTERVIEWING</p>
+                </div>
+
+                <div class="stat-card">
+                    <h2 id="responseRate">0%</h2>
+                    <p>RESPONSE RATE</p>
+                </div>
+
+            </section>
+
+                    <div class="addButton">
+                        <button id="addJobButton" class="add-button">
+                            + Add Application
+                        </button>
+                    </div>
+
+
+
+            <!--Job Schedule-->
+            <section class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Company</th>
+                            <th>Role</th>
+                            <th>Applied</th>
+                            <th>Status</th>
+                            <th>Follow-up</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="jobsTable">
+
+                    </tbody>
+
+                </table>
+
+                    <div id="emptyMessage" class="empty">
+                        No applications yet.
+                        <br>
+                        Click <b>+ Add Application</b> to add your first job.
+                    </div>
+
+            </section>
+        </main>
+    </div>
+
+    
+            <!-- Add Job Modal -->
+            <div id="jobModal" class="modal">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h2>Add Job Application</h2>
+                        <button id="closeModal">×</button>
+                    </div>
+
+
+                    <form id="jobForm">
+
+                        <label>
+                            Company
+                            <input
+                                type="text"
+                                id="company"
+                                required
+                            >
+                        </label>
+
+                        <label>
+                            Job Title
+                            <input
+                                type="text"
+                                id="role"
+                                required
+                            >
+                        </label>
+
+                        <label>
+                            Application Date
+                            <input
+                                type="date"
+                                id="appliedDate"
+                                required
+                            >
+                        </label>
+
+                        <label>
+                            Follow-up Date
+                            <input
+                                type="date"
+                                id="followUp"
+                            >
+                        </label>
+
+                        <label>
+                            Status
+                            <select id="status">
+
+                                <option value="Applied">
+                                    Applied
+                                </option>
+
+                                <option value="Screening">
+                                    Screening
+                                </option>
+
+                                <option value="Interviewing">
+                                    Interviewing
+                                </option>
+
+                                <option value="Offer">
+                                    Offer
+                                </option>
+
+                                <option value="Rejected">
+                                    Rejected
+                                </option>
+
+                            </select>
+
+                        </label>
+
+
+                        <div class="form-buttons">
+
+                            <button
+                                type="button"
+                                id="cancelButton"
+                                class="cancel"
+                            >
+                                Cancel
+                            </button>
+
+                            <button
+                                type="submit"
+                                class="save"
+                            >
+                                Add Application
+                            </button>
+
+                        </div>
+                    </form>
+                </div>
+             </div>
+
+
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
